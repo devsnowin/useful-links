@@ -54,10 +54,8 @@
 <style>
   main {
     max-width: 80rem;
-    min-height: 100vh;
-    margin: 4rem auto;
-    /* margin-top: -5rem; */
-
+    /* min-height: 100vh; */
+    margin: 8rem auto 4rem auto;
     display: flex;
     flex-direction: column;
     align-items: center;

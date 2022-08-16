@@ -59,6 +59,7 @@
     margin-inline: auto;
     margin-top: -5rem;
     text-align: center;
+    font-size: 1.2em;
 
     display: flex;
     flex-direction: column;
@@ -68,11 +69,7 @@
   }
 
   h1 {
-    font-size: 4em;
-  }
-
-  a {
-    font-size: 1em;
+    font-size: 1.8em !important;
   }
 
   p {
