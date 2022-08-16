@@ -54,10 +54,9 @@
 <style>
   main {
     max-width: 80rem;
-    height: 100vh;
+    min-height: 100vh;
     margin: 4rem auto;
-    margin-top: -5rem;
-    /* background-color: cadetblue; */
+    /* margin-top: -5rem; */
 
     display: flex;
     flex-direction: column;
@@ -75,7 +74,7 @@
   }
 
   .link__title {
-    font-size: 2em;
+    font-size: 1.6em;
     font-weight: 700;
   }
 

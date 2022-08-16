@@ -8,8 +8,10 @@
     inset: 0;
     height: 5rem;
     padding: 0 2rem;
+    background-color: #0b0d0d;
+    box-shadow: 0 2px 27px #28282850;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
   }
 
