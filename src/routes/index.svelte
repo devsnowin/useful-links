@@ -18,8 +18,6 @@
     onAuthStateChanged(firebaseAuth, (user) => {
       if (!user) {
         localStorage.removeItem("uid")
-      } else {
-        console.log(user);
       }
     });
   });
@@ -70,6 +68,13 @@
     justify-content: center;
     gap: 2rem;
   }
+
+  @media only screen and (max-width: 900px) {
+    .links{
+      padding-inline: 2rem;
+    }
+}
+
 
   .link__title {
     font-size: 1.6em;

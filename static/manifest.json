@@ -1,0 +1,16 @@
+{
+  "name": "Useful Links",
+  "description": "Find links that can help you on your professional journey.",
+  "version": "1.0.0",
+  "background_color": "#0f1111",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#31e8ab",
+  "icons": [
+    {
+      "src": "./favicon.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

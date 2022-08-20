@@ -17,7 +17,7 @@
     onSnapshot(linksCollection, (snapshot) => {
       tags = snapshot.docs.map((d) => d.data().tag);
       tags.sort();
-      tags.unshift("all")
+      tags.unshift("all");
       tags = [...new Set(tags)];
     });
   });
@@ -48,7 +48,9 @@
 <style>
   .categories {
     width: 100%;
+    padding-inline: 1rem;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 1rem;
