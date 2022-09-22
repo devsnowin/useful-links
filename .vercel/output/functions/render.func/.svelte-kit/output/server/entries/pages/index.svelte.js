@@ -30,7 +30,7 @@ const Categories = create_ssr_component(($$result, $$props, $$bindings, slots) =
 });
 const index_svelte_svelte_type_style_lang = "";
 const css = {
-  code: 'main.svelte-qszzr8{max-width:80rem;margin:8rem auto 4rem auto;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2.5rem}.links.svelte-qszzr8{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:2rem}@media only screen and (max-width: 900px){.links.svelte-qszzr8{padding-inline:2rem}}.link__title.svelte-qszzr8{font-size:1.6em;font-weight:700}.link__title.svelte-qszzr8::marker{content:"\u{1F517}"}',
+  code: 'main.svelte-1a91gw8{max-width:80rem;margin:8rem auto 4rem auto;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2.5rem}.links.svelte-1a91gw8{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:2rem}@media only screen and (max-width: 900px){.links.svelte-1a91gw8{padding-inline:2rem}}.link__title.svelte-1a91gw8{font-size:1.6em;font-weight:700}.link__title.svelte-1a91gw8::marker{content:"\u{1F517}"}',
   map: null
 };
 const Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -44,9 +44,9 @@ const Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $$rendered;
   do {
     $$settled = true;
-    $$rendered = `${$$result.head += `${$$result.title = `<title>Useful Links</title>`, ""}`, ""}
+    $$rendered = `${$$result.head += `${$$result.title = `<title>Useful Links</title>`, ""}<meta name="${"description"}" content="${"Useful website for beginners who are eager to learn good stuff as quickly as possible!"}" data-svelte="svelte-mx3uv7"><meta name="${"robots"}" content="${"index, follow"}" data-svelte="svelte-mx3uv7"><meta name="${"keywords"}" content="${"useful links, resources to learn coding, learn coding, useful resources"}" data-svelte="svelte-mx3uv7"><meta name="${"ahrefs-site-verification"}" content="${"6c580f501766848c2256708bb5c07c922e78aa13dda4cdde90b1a28ad1d36760"}" data-svelte="svelte-mx3uv7">`, ""}
 
-<main class="${"svelte-qszzr8"}">${validate_component(Categories, "Categories").$$render(
+<main class="${"svelte-1a91gw8"}">${validate_component(Categories, "Categories").$$render(
       $$result,
       { links, activeTag, filtered },
       {
@@ -61,10 +61,10 @@ const Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       },
       {}
     )}
-  <ol class="${"links svelte-qszzr8"}">${filtered && filtered.length > 0 ? `${each(filtered, (link) => {
-      return `<li class="${"link__title svelte-qszzr8"}"><a${add_attribute("href", "/link/" + link.id, 0)}>${escape(link.title)}</a>
+  <ol class="${"links svelte-1a91gw8"}">${filtered && filtered.length > 0 ? `${each(filtered, (link) => {
+      return `<li class="${"link__title svelte-1a91gw8"}"><a${add_attribute("href", "/link/" + link.id, 0)}>${escape(link.title)}</a>
         </li>`;
-    })}` : `<p>No links founded!</p>`}</ol>
+    })}` : `${!filtered ? `<p>No links founded!</p>` : `<p>loading.....</p>`}`}</ol>
 </main>`;
   } while (!$$settled);
   return $$rendered;

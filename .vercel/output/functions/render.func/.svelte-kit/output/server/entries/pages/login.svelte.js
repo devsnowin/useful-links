@@ -13,7 +13,8 @@ const Login = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let password;
   initialize();
   $$result.css.add(css);
-  return `<form class="${"svelte-6egjc"}"><input type="${"email"}" required placeholder="${"Email Id"}" class="${"svelte-6egjc"}"${add_attribute("value", email, 0)}>
+  return `<form class="${"svelte-6egjc"}">
+  <input type="${"email"}" required placeholder="${"Email Id"}" autocomplete="${"off"}" autofocus class="${"svelte-6egjc"}"${add_attribute("value", email, 0)}>
   <input type="${"password"}" required placeholder="${"Password"}" class="${"svelte-6egjc"}"${add_attribute("value", password, 0)}>
   <input type="${"submit"}" hidden class="${"svelte-6egjc"}">
   <p class="${"svelte-6egjc"}">press <span class="${"svelte-6egjc"}">enter</span></p>
