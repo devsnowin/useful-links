@@ -10,6 +10,7 @@
   let links = [];
   let activeTag = "all";
   let filtered = [];
+  let loading = true;
 
   const { firestore, firebaseAuth } = initialize(config.firebaseConfig);
   const linksCollection = collection(firestore, "Links");
@@ -17,21 +18,42 @@
   onMount(() => {
     onAuthStateChanged(firebaseAuth, (user) => {
       if (!user) {
-        localStorage.removeItem("uid")
+        localStorage.removeItem("uid");
       }
     });
   });
 
   onMount(() => {
-    onSnapshot(linksCollection, (snapshot) => {
-      links = snapshot.docs.map((d) => ({ id: d.id, ...d.data() }));
-      filtered = snapshot.docs.map((d) => ({ id: d.id, ...d.data() }));
-    });
+    onSnapshot(
+      linksCollection,
+      (snapshot) => {
+        links = snapshot.docs.map((d) => ({ id: d.id, ...d.data() }));
+        filtered = snapshot.docs.map((d) => ({ id: d.id, ...d.data() }));
+      },
+      (error) => {
+        filtered = null;
+        console.log(error);
+      }
+    );
+    loading = false;
   });
 </script>
 
 <svelte:head>
   <title>Useful Links</title>
+  <meta
+    name="description"
+    content="This is a useful website for beginners who are eager to learn good stuff as quickly as possible!"
+  />
+  <meta name="robots" content="index, follow" />
+  <meta
+    name="keywords"
+    content="useful links, resources to learn coding, learn coding, useful resources"
+  />
+  <meta
+    name="ahrefs-site-verification"
+    content="6c580f501766848c2256708bb5c07c922e78aa13dda4cdde90b1a28ad1d36760"
+  />
 </svelte:head>
 
 <main>
@@ -43,8 +65,10 @@
           <a href={"/link/" + link.id}>{link.title}</a>
         </li>
       {/each}
-    {:else}
+    {:else if !filtered}
       <p>No links founded!</p>
+    {:else}
+      <p>loading.....</p>
     {/if}
   </ol>
 </main>
@@ -70,11 +94,10 @@
   }
 
   @media only screen and (max-width: 900px) {
-    .links{
+    .links {
       padding-inline: 2rem;
     }
-}
-
+  }
 
   .link__title {
     font-size: 1.6em;

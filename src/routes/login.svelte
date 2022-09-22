@@ -26,7 +26,15 @@
 </script>
 
 <form on:submit={handleSubmit}>
-  <input type="email" bind:value={email} required placeholder="Email Id" />
+  <!-- svelte-ignore a11y-autofocus -->
+  <input
+    type="email"
+    bind:value={email}
+    required
+    placeholder="Email Id"
+    autocomplete="off"
+    autofocus
+  />
   <input
     type="password"
     bind:value={password}
