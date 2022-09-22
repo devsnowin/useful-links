@@ -43,7 +43,7 @@
   <title>Useful Links</title>
   <meta
     name="description"
-    content="This is a useful website for beginners who are eager to learn good stuff as quickly as possible!"
+    content="Useful website for beginners who are eager to learn good stuff as quickly as possible!"
   />
   <meta name="robots" content="index, follow" />
   <meta
