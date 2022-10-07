@@ -71,12 +71,12 @@
       <p>loading.....</p>
     {/if}
   </ol>
+  <a href="/rating" class="rating-link">⭐</a>
 </main>
 
 <style>
   main {
     max-width: 80rem;
-    /* min-height: 100vh; */
     margin: 8rem auto 4rem auto;
     display: flex;
     flex-direction: column;
@@ -86,9 +86,9 @@
   }
 
   .links {
+    max-width: 46rem;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     justify-content: center;
     gap: 2rem;
   }
@@ -106,5 +106,24 @@
 
   .link__title::marker {
     content: "🔗";
+  }
+
+  .rating-link {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    font-size: 1.2em;
+    border-radius: 50%;
+    background-color: rgb(49, 232, 171);
+    transition: all 0.3s ease;
+  }
+
+  .rating-link:hover{
+    font-size: 1.6em;
   }
 </style>
